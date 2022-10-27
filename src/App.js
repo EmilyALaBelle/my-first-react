@@ -1,8 +1,9 @@
+import { useState } from 'react'
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const myName = 'Emily'
+  const [myName, setmyName] = useState('Emily')
   return (
     <div className="App">
       <header className="App-header">
@@ -10,14 +11,9 @@ function App() {
         <p>
           {myName} This is cool!
         </p>
-        <a
-          className="App-link"
-          href="https://bocacode.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button onClick={() => setmyName('Ashley')}>Ashley</button>
+        <button onClick={() => setmyName('Randy')}>Randy</button>
+        <button onClick={() => setmyName('Angela')}>Angela</button>
       </header>
     </div>
   );
